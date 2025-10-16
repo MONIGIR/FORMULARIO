@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UAS-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<title>Formulario</title>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Registro</div>
+    <form id="form-validation" novalidate>
+        <div class="form-group">
+            <span>Nombre</span>
+            <input type="text" placeholder="Ingrese nombre" required>
+            <small>Por favor ingrese nombre</small>
+        </div>
+                <div class="form-group">
+            <span>Usuario</span>
+            <input type="text" placeholder="Ingrese usuario" required>
+            <small>Por favor ingrese usuario</small>
+        </div>
+                <div class="form-group">
+            <span>Email</span>
+            <input type="email" placeholder="Ingrese Email" required>
+            <small>Por favor ingrese email</small>
+        </div>
+                <div class="form-group">
+            <span>Telefono</span>
+            <input type="number" placeholder="Ingrese telefono" required>
+            <small>Por favor ingrese telefono</small>
+        </div>
+                <div class="form-group">
+            <span>Contraseña</span>
+            <input type="password" placeholder="Ingrese contraseña" required>
+            <small>Por favor ingrese contraseña</small>
+        </div>
+                <div class="form-group">
+            <span>Confirmar Contraseña</span>
+            <input type="password" placeholder="Ingrese contraseña" required>
+            <small>Por favor ingrese contraseña nuevamente</small>
+        </div>
+        <div class="button">
+            <input type="submit" value="Registrarse">
+        </div>
+    </form>
+  </div>
+  <script>
+    const addform = document.getElementById
+    ("form-validation");
+    addform.addEventListener("submit", (e)=>{
+        if(addform.checkValidity()===false){
+            e.preventDefault();
+            e.stopPropagation();
+            addform.classList.add('was-validated');
+            return false
+        }
+    })
+  </script>
+</body>
+</html>
